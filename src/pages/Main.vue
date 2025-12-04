@@ -442,6 +442,7 @@ import { RouterLink } from 'vue-router';
         overflow: hidden;
     }
     .trade-in-catalog img{
+        width: 460px;
         position: absolute;
         bottom: 0%;
         right: 0%;
