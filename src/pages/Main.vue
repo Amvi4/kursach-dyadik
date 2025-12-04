@@ -439,6 +439,7 @@ import { RouterLink } from 'vue-router';
         background-color: #032807;
         align-items: center;
         transition: 0.4s;
+        overflow: hidden;
     }
     .trade-in-catalog img{
         position: absolute;
