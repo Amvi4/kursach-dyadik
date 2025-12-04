@@ -12,21 +12,21 @@
                 // продукты в корзине
                 items:[
                     { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, 
-                    from: '/src/images/country/italy.png', image: "/src/images/bicycle-bianchi.png", category: 'mountain', stock: 0, },
+                    from: '/assets/images/country/italy.png', image: "/assets/images/bicycle-bianchi.png", category: 'mountain', stock: 0, },
                     { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
                     { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
                 ],
                 activeCategory: '',
                 // похожие товары
                 itemsdop:[
                     { title: 'Look 977 BLACK FLUO YELLOW GREEN XT 2x11S AMC 2018', price: 38484, 
-                     image: "/src/images/Look977.png", category: 'mountain', stock: 0, count: 1},
+                     image: "/assets/images/Look977.png", category: 'mountain', stock: 0, count: 1},
                     { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekVerve.png', category: 'mountain', stock: 1, count: 1},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekVerve.png', category: 'mountain', stock: 1, count: 1},
                     { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0, count: 1},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0, count: 1},
                     
                 ],
             }

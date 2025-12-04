@@ -1,21 +1,13 @@
 <script setup>
- import { createApp } from 'vue';
-import itemsdop from './Cart.vue';
 
 const items = [
                     { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, 
-                    from: '/src/images/country/italy.png', image: "/src/images/bicycle-bianchi.png", category: 'mountain', stock: 0, },
+                    from: '/assets/images/country/italy.png', image: "/assets/images/bicycle-bianchi.png", category: 'mountain', stock: 0, },
                     { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
                     { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, 
-                    from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
+                    from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
                 ];
-                function increment(item) {
-                item.count++
-                };
-            function decrement(item) {
-                if (item.count > 1) item.count--
-            }
 
 </script>
 

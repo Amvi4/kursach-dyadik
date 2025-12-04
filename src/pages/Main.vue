@@ -11,20 +11,20 @@ import { RouterLink } from 'vue-router';
                 // данные новинок
                 items: [
                     { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, from: '/assets/images/country/italy.png', image: "/assets/images/bicycle-bianchi.png", category: 'mountain', stock: 0, },
-                    { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
-                    { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, from:'/src/images/country/usa.png', image: '/src/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
+                    { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekVerve.png', category: 'mountain', stock: 1,},
+                    { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0,},
                 ],
 
                 activeCategory: 'mountain',
                 // экипировка
                 itemsdop: [
-                    { title: 'Rudy Project Airstorm Lime Fluo White Shiny', price: 7990, image: "/src/images/kaska.png", stock: 0, },
-                    { title: 'Rudy Project Protera Blue Orange Matt', price: 9420, image: "/src/images/kaska2.png", stock: 0, },
-                    { title: 'Rudy Project Avenger Titanium Lime Matt', price: 9200, image: "/src/images/kaska3.png", stock: 0, },
+                    { title: 'Rudy Project Airstorm Lime Fluo White Shiny', price: 7990, image: "/assets/images/kaska.png", stock: 0, },
+                    { title: 'Rudy Project Protera Blue Orange Matt', price: 9420, image: "/assets/images/kaska2.png", stock: 0, },
+                    { title: 'Rudy Project Avenger Titanium Lime Matt', price: 9200, image: "/assets/images/kaska3.png", stock: 0, },
                 ],
 
                 reviews: [
-                    { title: 'BMC Kaius 01 идеальный гоночный гравийный велосипед', image: "/src/images/reviewimg.png", date: '25.01.2023'},
+                    { title: 'BMC Kaius 01 идеальный гоночный гравийный велосипед', image: "/assets/images/reviewimg.png", date: '25.01.2023'},
                 ],
             };
             

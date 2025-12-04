@@ -9,12 +9,12 @@ export default{
         return{
             // блоги
             items: [
-                {text:'Pinarello Dogma F развивает карбоновый шоссейный велосипед следующего...', date:'14.02.2025', image:'/src/images/obzor.png'},
-                {text:'BMC Kaius 01 идеальный гоночный гравийный велосипед', date:'25.01.2025', image:'/src/images/obzor2.png'},
-                {text:'Все новые гоночные велосипеды BMC Fourstroke XC оснащены волшебным подседельным', date:'24.01.2024', image:'/src/images/obzor3.png'},
-                {text:'Велосипед Wilier Grantismo SLR для шоссейных гонок', date:'24.01.2024', image:'/src/images/obzor4.png'},
-                {text:'Первые поездки на новой гоночной ракете Wilier Urta SLR 100mm XC MTB, всего 9,8 кг!', date:'24.01.2023', image:'/src/images/obzor5.png'},
-                {text:'Велосипед Wilier Grantismo SLR для шоссейных гонок', date:'24.01.2023', image:'/src/images/obzor6.png'},
+                {text:'Pinarello Dogma F развивает карбоновый шоссейный велосипед следующего...', date:'14.02.2025', image:'/assets/images/obzor.png'},
+                {text:'BMC Kaius 01 идеальный гоночный гравийный велосипед', date:'25.01.2025', image:'/assets/images/obzor2.png'},
+                {text:'Все новые гоночные велосипеды BMC Fourstroke XC оснащены волшебным подседельным', date:'24.01.2024', image:'/assets/images/obzor3.png'},
+                {text:'Велосипед Wilier Grantismo SLR для шоссейных гонок', date:'24.01.2024', image:'/assets/images/obzor4.png'},
+                {text:'Первые поездки на новой гоночной ракете Wilier Urta SLR 100mm XC MTB, всего 9,8 кг!', date:'24.01.2023', image:'/assets/images/obzor5.png'},
+                {text:'Велосипед Wilier Grantismo SLR для шоссейных гонок', date:'24.01.2023', image:'/assets/images/obzor6.png'},
             ]
         }
     }

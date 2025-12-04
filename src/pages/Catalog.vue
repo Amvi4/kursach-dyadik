@@ -2,20 +2,20 @@
 import { computed, ref } from 'vue';
 // данные продукта
 const items = [
-  { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, from: '/src/images/country/italy.png', image: '/src/images/bicycle-bianchi.png', category: 'mountain', stock: 1 },
-  { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, from: '/src/images/country/usa.png', image: '/src/images/bicycle-trekVerve.png', category: 'city', stock: 1 },
-  { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, from: '/src/images/country/usa.png', image: '/src/images/bicycle-trekMarlin.png', category: '2podves', stock: 1 },
-  { title: 'Look 977 BLACK FLUO YELLOW GREEN XT 2x11S ', price: 12434, from: '/src/images/country/switzerland.png', image: '/src/images/Look977.png', category: 'city', stock: 1 },
-  { title: 'Trek Dual Sport 2 Mulsanne Hybd 2022', price: 85634, from: '/src/images/country/italy.png', image: '/src/images/trekDual.png', category: '2podves', stock: 1 },
-  { title: 'Orbea ALMA H30 2021', price: 12419, from: '/src/images/country/france.png', image: '/src/images/OrbeaALMA.png', category: 'mountain', stock: 1 },
-  { title: 'Trek Fx 3 Disc Dnister Black HYBD 2022', price: 64363, from: '/src/images/country/italy.png', image: '/src/images/trekFx.png', category: 'graviy', stock: 0 },
-  { title: 'Scott Scale 700 RS 2016', price: 54322, from: '/src/images/country/france.png', image: '/src/images/scottScale.png', category: 'mountain', stock: 1 },
-  { title: 'Look 979 BLACK FLUO YELLOW GREEN XT 2x11S ', price: 49399, from: '/src/images/country/italy.png', image: '/src/images/look979.png', category: 'mountain', stock: 1 },
-  { title: 'Scott Scale 700 SL 2016', price: 84579, from: '/src/images/country/spain.png', image: '/src/images/scottScale2.png', category: 'mountain', stock: 1 },
-  { title: 'Trek Marlin 4 Matte Anthracite ATB 29 2022', price: 34790, from: '/src/images/country/italy.png', image: '/src/images/trekMarlin2.png', category: 'graviy', stock: 0 },
-  { title: 'Orbea RUDE 10 Черный 2022', price: 76589, from: '/src/images/country/spain.png', image: '/src/images/orbeaRUDE.png', category: 'mountain', stock: 1 },
-  { title: 'Trek Marlin 5 Lithium Grey Chrome ATB 27.5 2022', price: 21000, from: '/src/images/country/usa.png', image: '/src/images/trekMarlin5.png', category: 'triatlon', stock: 1 },
-  { title: 'Trek Marlin 4 Aloha ATB 27.5 2022', price: 23478, from: '/src/images/country/usa.png', image: '/src/images/trekMarlin4.png', category: 'triatlon', stock: 1 },
+  { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, from: '/assets/images/country/italy.png', image: '/assets/images/bicycle-bianchi.png', category: 'mountain', stock: 1 },
+  { title: 'Trek Verve 2 Disc Lithium Grey HYBD 2022', price: 49300, from: '/assets/images/country/usa.png', image: '/assets/images/bicycle-trekVerve.png', category: 'city', stock: 1 },
+  { title: 'Trek Marlin 7 Matte Nautical Navy Matte Anth ATB 29 2022', price: 15000, from: '/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: '2podves', stock: 1 },
+  { title: 'Look 977 BLACK FLUO YELLOW GREEN XT 2x11S ', price: 12434, from: '/assets/images/country/switzerland.png', image: '/assets/images/Look977.png', category: 'city', stock: 1 },
+  { title: 'Trek Dual Sport 2 Mulsanne Hybd 2022', price: 85634, from: '/assets/images/country/italy.png', image: '/assets/images/trekDual.png', category: '2podves', stock: 1 },
+  { title: 'Orbea ALMA H30 2021', price: 12419, from: '/assets/images/country/france.png', image: '/assets/images/OrbeaALMA.png', category: 'mountain', stock: 1 },
+  { title: 'Trek Fx 3 Disc Dnister Black HYBD 2022', price: 64363, from: '/assets/images/country/italy.png', image: '/assets/images/trekFx.png', category: 'graviy', stock: 0 },
+  { title: 'Scott Scale 700 RS 2016', price: 54322, from: '/assets/images/country/france.png', image: '/assets/images/scottScale.png', category: 'mountain', stock: 1 },
+  { title: 'Look 979 BLACK FLUO YELLOW GREEN XT 2x11S ', price: 49399, from: '/assets/images/country/italy.png', image: '/assets/images/look979.png', category: 'mountain', stock: 1 },
+  { title: 'Scott Scale 700 SL 2016', price: 84579, from: '/assets/images/country/spain.png', image: '/assets/images/scottScale2.png', category: 'mountain', stock: 1 },
+  { title: 'Trek Marlin 4 Matte Anthracite ATB 29 2022', price: 34790, from: '/assets/images/country/italy.png', image: '/assets/images/trekMarlin2.png', category: 'graviy', stock: 0 },
+  { title: 'Orbea RUDE 10 Черный 2022', price: 76589, from: '/assets/images/country/spain.png', image: '/assets/images/orbeaRUDE.png', category: 'mountain', stock: 1 },
+  { title: 'Trek Marlin 5 Lithium Grey Chrome ATB 27.5 2022', price: 21000, from: '/assets/images/country/usa.png', image: '/assets/images/trekMarlin5.png', category: 'triatlon', stock: 1 },
+  { title: 'Trek Marlin 4 Aloha ATB 27.5 2022', price: 23478, from: '/assets/images/country/usa.png', image: '/assets/images/trekMarlin4.png', category: 'triatlon', stock: 1 },
 ];
 
 const activeCategory = ref('mountain');
