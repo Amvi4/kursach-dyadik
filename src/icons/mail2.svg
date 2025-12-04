@@ -1,0 +1,7 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+	<rect id="mail" width="32.000000" height="32.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	<g id="Group">
+		<path id="Vector" d="M5.33333 6.66699C4.96515 6.66699 4.63181 6.81623 4.39052 7.05751C4.14924 7.29881 4 7.63214 4 8.00033L4 24.0003C4 24.7367 4.59696 25.3337 5.33333 25.3337L26.6667 25.3337C27.4031 25.3337 28 24.7367 28 24.0003L28 8.00033C28 7.63214 27.8508 7.29881 27.6095 7.05751C27.3681 6.81623 27.0348 6.66699 26.6667 6.66699L5.33333 6.66699Z" fill-rule="nonzero" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+		<path id="Vector" d="M4.3905 7.05762L14.1144 16.7814C15.1557 17.8229 16.8442 17.8229 17.8856 16.7814L27.6094 7.05762" fill-rule="nonzero" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	</g>
+</svg>

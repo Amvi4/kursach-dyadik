@@ -1,0 +1,9 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+	<rect id="calendar" width="32.000000" height="32.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	<g id="Group">
+		<path id="Vector" d="M5.33337 14.667L26.6667 14.667" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+		<path id="Vector" d="M5.33337 25.3337C5.33337 26.8065 6.52728 28.0003 8.00004 28.0003L24 28.0003C25.4728 28.0003 26.6667 26.8065 26.6667 25.3337L26.6667 14.667L26.6667 9.33366C26.6667 7.8609 25.4728 6.66699 24 6.66699L8.00004 6.66699C6.52728 6.66699 5.33337 7.8609 5.33337 9.33366L5.33337 25.3337Z" fill-rule="nonzero" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+		<path id="Vector" d="M0 0L5.33333 0" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="matrix(0,1,-1,0,20,4)" />
+		<path id="Vector" d="M0 0L5.33333 0" stroke="rgb(173.874,221.899,144.021)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="matrix(0,1,-1,0,12,4)" />
+	</g>
+</svg>
