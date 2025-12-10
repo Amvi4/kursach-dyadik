@@ -14,7 +14,7 @@ export default{
             <RouterLink to="/register" class="auth-text">Регистрация</RouterLink >
         </div>
         <div class="auth-cont">
-            <input type="email" name="email" id="email-auth" placeholder="ваше E-mail">
+            <input type="email" name="email" id="email-auth" placeholder="ваш E-mail">
             <input type="password" name="password" id="pass-auth" placeholder="Пароль">
             <RouterLink to="/profile" class="link-auth"><button class="auth-btn">Войти</button></RouterLink>
         </div>
