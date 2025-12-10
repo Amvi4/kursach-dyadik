@@ -12,10 +12,9 @@ import About from './pages/About.vue';
 import Specifications from './pages/Specifications.vue';
 
 const routes = [
-  { path: '/login', component: Login },
-  { 
-    path: '/register', component: Register, },
-    { path: '/', name: 'main', component: Main },
+        { path: '/login', component: Login },
+        { path: '/register', component: Register, },
+        { path: '/', name: 'main', component: Main },
         { path: '/catalog', name: 'catalog', component: Catalog },
         { path: '/blog', name: 'blog', component: Blog },
         { path: '/cart', name: 'cart', component: Cart},
