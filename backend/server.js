@@ -15,7 +15,7 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body
 
   if (username === "example@mail.ru" && password === "qwerty") {
-    return res.json({ token: "test-token-qwerty" })
+    return res.json({ token: "abc" })
   }
 
   return res.status(401).json({ error: "Неверные данные" })
