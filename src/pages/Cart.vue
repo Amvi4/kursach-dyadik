@@ -8,7 +8,7 @@
         components: {Header, Footer},
 
         data(){
-            return{
+            return {
                 // продукты в корзине
                 items:[
                     { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, 
@@ -29,6 +29,19 @@
                     from:'/assets/images/country/usa.png', image: '/assets/images/bicycle-trekMarlin.png', category: 'mountain', stock: 0, count: 1},
                     
                 ],
+                showModal: false,
+      currentProduct: null,
+
+      // Демо-данные для проверки
+      validLogin: "user123",
+      validPassword: "qwerty",
+
+      form: {
+        login: "",
+        password: ""
+      },
+
+      error: ""
             }
         },
 
@@ -39,6 +52,29 @@
             decrement(item) {
                 if (item.count > 1) item.count--
             },
+             openModal(product) {
+      this.currentProduct = product;
+      this.showModal = true;
+    },
+
+    closeModal() {
+      this.showModal = false;
+      this.form.login = "";
+      this.form.password = "";
+      this.error = "";
+    },
+
+    validate() {
+      if (
+        this.form.login === this.validLogin &&
+        this.form.password === this.validPassword
+      ) {
+        alert("Аккаунт подтверждён!");
+        this.closeModal();
+      } else {
+        this.error = "Неправильный логин или пароль";
+      }
+    }
         },
         computed: {
             totalSum() {
@@ -82,7 +118,7 @@
                 <div  class="itog-price">
                     <p>Итого</p><div class="totalPrice">{{ totalSum }} ₽</div>
                 </div>
-                <RouterLink to="/pay"><button >Оформить заказ</button></RouterLink>
+                <button @click="openModal(product)">Оформить заказ</button>
             </div>
         </div>
     </div>
@@ -97,20 +133,37 @@
                         <div class="no-in-stock" v-else>Распродано</div>
                     </div>
                     <img class="card-img" :src="item.from" alt="страна">
-                    <img class="card-img-bicycle" :src="item.image" :alt="item.title">
+                    <img class="card-img-bicycle" :src="item.image" :alt="item.title" loading="lazy">
                     
                 </div>
                 <div class="card-text">
                     <div class="item-name">{{ item.title }}</div>
                     <div class="item-price">{{ item.price }}₽</div>
                 </div>
-                <button class="one-click">➤  В 1 клик</button>
+                <RouterLink to="/specifications"><button class="one-click">Характеристики</button></RouterLink>
             </article>
             <div class="next-button">
                 <p class="next-button-text"><img src="../icons/next.svg" alt="" srcset=""></p>
             </div>
         </div>
     </div>
+    <div v-if="showModal" class="modal-overlay">
+  <div class="modal">
+    <h3>Это точно вы?</h3>
+    <p>Подтвердите ваш аккаунт</p>
+
+    <input v-model="form.login" placeholder="Логин">
+    <input v-model="form.password" type="password" placeholder="Пароль">
+
+    <div class="modal-actions">
+      <button @click="validate">OK</button>
+      <button @click="closeModal">Отмена</button>
+    </div>
+
+    <p v-if="error" class="error">{{ error }}</p>
+  </div>
+</div>
+
 
 </template>
 
@@ -134,7 +187,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 949px;
+    width: 900px;
 }
 .cart-btns{
     display: flex;
@@ -180,19 +233,25 @@
     color: black;
 }
 .itog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    width: 255px;
+    width: 220px;
 }
 .itog-price{
     margin: 100px 0px 0px 0px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 30px;
     justify-content: space-between;
     font-size: 24px;
 }
+
 .itog button{
-    margin: 0px 14%;
+    margin: 0;
     width: 200px;
 }
 </style>

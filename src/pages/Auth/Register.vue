@@ -1,8 +1,10 @@
 <script>
 import Header from '../../components/Header.vue';
 import Footer from '../../components/Footer.vue';
-export default{
-    components:  {Header, Footer},
+
+
+export default {
+    components: {Header, Footer},
 }
 </script>
 
@@ -13,13 +15,13 @@ export default{
             <RouterLink to="/login" class="auth-text">Войти</RouterLink >
             <h1>Регистрация</h1>
         </div>
-        <div class="auth-cont">
+        <form class="auth-cont">
             <input type="text" name="name" placeholder="Введите ваше имя">
             <input type="email" name="email" id="email-auth" placeholder="ваш E-mail">
             <input type="password" name="password" id="pass-auth" placeholder="Пароль">
             <input type="password" name="password" id="pass-auth" placeholder="Повторите Пароль">
             <RouterLink to="/profile" class="link-auth"><button class="auth-btn">Регистрация</button></RouterLink>
-        </div>
+        </form>
     </main>
 
 </template>
@@ -77,5 +79,8 @@ export default{
     }
     .link-auth{
         width: 300px;
+    }
+    .auth-btn{
+        max-width: 300px;
     }
 </style>

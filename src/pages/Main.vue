@@ -2,10 +2,21 @@
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 import { RouterLink } from 'vue-router';
+import { useHead } from '@vueuse/head';
 
     export default {
         components: { Header, Footer },
-        name: "main",
+        name: "HomePage",
+
+        metaInfo() {
+            return {
+                title: "HomePage",
+                meta: [
+                    { name: "description", content: "Описание страницы" }
+                ]
+            }
+        },
+        
         data() {
             return {
                 // данные новинок
@@ -28,13 +39,27 @@ import { RouterLink } from 'vue-router';
                 ],
             };
             
+            
         },
 
         methods: {
                 goToPay() {
                     this.$inertia.visit('/pay');
                 }
-        }   
+                
+                
+        },
+        setup() {
+            useHead({
+                title: "/HomePage",
+                meta: [
+                    {
+                    name: "description",
+                    content: "Велосипеды"
+                    }
+                ]
+            })
+  }
     };
 </script>
 
@@ -76,27 +101,26 @@ import { RouterLink } from 'vue-router';
         <h2 class="h2">Новинки</h2>
         <div class="new-cards" :key="activeCategory">
             <article class="new-card" v-for="item in items" :key="item.title">
-                <RouterLink to="/specifications">
                 <img class="card-img" :src="item.from" alt="страна">
                 <div class="stocks">
                         <div  class="in-stock" v-if="item.stock === 1">В наличии</div>
                         <div class="no-in-stock" v-else>Распродано</div>
                     </div>
                 <div class="cont-card-imgs">
-                    <img class="card-img-bicycle" :src="item.image" :alt="item.title">
+                    <img class="card-img-bicycle" :src="item.image" :alt="item.title" loading="lazy">
                     
                 </div>
                 <div class="card-text">
                     <div class="item-name">{{ item.title }}</div>
                     <div class="item-price">{{ item.price }}₽</div>
                 </div>
-                </RouterLink>
-                <RouterLink to="/pay"><button class="one-click">➤  В 1 клик</button></RouterLink>
+                <RouterLink to="/specifications"><button class="one-click">Характеристики</button></RouterLink>
             </article>
             <div class="next-button">
                 <p class="next-button-text"><img src="../icons/next.svg" alt="" srcset=""></p>
             </div>
         </div>
+       
     </div>
     <!-- переход на ккаталог -->
     <div class="catalogs">
@@ -176,21 +200,19 @@ import { RouterLink } from 'vue-router';
         <h2 class="h2">Экипировка</h2>
         <div class="equip-cards" :key="activeCategory">
             <article class="equip-card" v-for="item in itemsdop" :key="item.title">
-                <RouterLink to="/specifications">
                 <div class="cont-card-imgs">
                     <div class="stocks">
                         <div  class="in-stock" v-if="item.stock === 1">В наличии</div>
                         <div class="no-in-stock" v-else>Распродано</div>
                     </div>
-                    <img class="card-img-bicycle" :src="item.image" :alt="item.title">
+                    <img class="card-img-bicycle" :src="item.image" :alt="item.title" loading="lazy">
                     
                 </div>
                 <div class="card-text">
                     <div class="item-name">{{ item.title }}</div>
                     <div class="item-price">{{ item.price }}₽</div>
                 </div>
-                </RouterLink>
-                <RouterLink to="/pay"><button class="one-click">➤  В 1 клик</button></RouterLink>
+                <RouterLink to="/specifications"><button class="one-click">Характеристики</button></RouterLink>
             </article>
         </div>
     </div>

@@ -1,5 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue';
+import { reactive } from "vue"
+import { useRouter } from "vue-router"
+const router = useRouter()
 // данные продукта
 const items = [
   { title: 'Bianchi AQUILA L DURA ACE DI2 TEAM JUMBO 2021', price: 38484, from: '/assets/images/country/italy.png', image: '/assets/images/bicycle-bianchi.png', category: 'mountain', stock: 1 },
@@ -27,6 +30,43 @@ const filteredItems = computed(() => {
 
 function clearFilters() {
   activeCategory.value = '';
+}
+
+
+// модалка
+const showModal = ref(false)
+const currentProduct = ref(null)
+
+const validLogin = "example@mail.ru"
+const validPassword = "qwerty"
+
+const form = reactive({
+  login: "",
+  password: ""
+})
+
+const error = ref("")
+
+function openModal(product) {
+  currentProduct.value = product
+  showModal.value = true
+}
+
+function closeModal() {
+  showModal.value = false
+  form.login = ""
+  form.password = ""
+  error.value = ""
+}
+
+function validate() {
+  if (form.login === validLogin && form.password === validPassword) {
+    alert("Аккаунт подтверждён!");
+    closeModal();
+    router.push("/pay"); 
+  } else {
+    error.value = "Неправильный логин или пароль"
+  }
 }
 </script>
 
@@ -78,7 +118,7 @@ function clearFilters() {
                         <div class="no-in-stock" v-else>Распродано</div>
                     </div>
                     <img class="card-img" :src="item.from" alt="страна">
-                    <img class="card-img-bicycle" :src="item.image" :alt="item.title">
+                    <img class="card-img-bicycle" :src="item.image" :alt="item.title" loading="lazy">
                     
                 </div>
                 <div class="card-text">
@@ -86,8 +126,24 @@ function clearFilters() {
                     <div class="item-price">{{ item.price }}₽</div>
                 </div>
                 </RouterLink>
-                <RouterLink to="/pay"><button class="one-click">➤  В 1 клик</button></RouterLink>
+                <button class="one-click" @click="openModal(product)">➤  В 1 клик</button>
             </article>
+        </div>
+        <div v-if="showModal" class="modal-overlay">
+            <div class="modal">
+                <h3>Это точно вы?</h3>
+                <p>Подтвердите ваш аккаунт</p>
+
+                <input v-model="form.login" placeholder="Логин">
+                <input v-model="form.password" type="password" placeholder="Пароль">
+
+                <div class="modal-actions">
+                    <button @click="validate">OK</button>
+                    <button @click="closeModal">Отмена</button>
+                </div>
+
+                <p v-if="error" class="error">{{ error }}</p>
+            </div>
         </div>
     </div>
 
@@ -203,4 +259,54 @@ p{
     height: 255px;
     width: 255px;
 }
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+}
+.modal h3, p{
+    margin: 0;
+    padding: 0;
+}
+.modal p{
+    padding: 0;
+}
+.modal input{
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #7777;
+    border-radius: 12px;
+    color: black;
+    font-size: 24px;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+.modal-actions button{
+    width: 100px;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
 </style>

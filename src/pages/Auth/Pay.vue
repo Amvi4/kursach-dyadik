@@ -8,7 +8,7 @@
         <div class="pay">
             <h1 class="">Покупка</h1>
         </div>
-        <div class="auth-cont">
+        <form class="auth-cont">
             <input type="email" name="email" id="email-auth" placeholder="ваш E-mail">
             <input type="text" name="name" placeholder="XXXX-XXXX-XXXX-XXXX">
             <div class="ccvv-crok">
@@ -16,7 +16,7 @@
                 <input type="number" name="number" id="pass-auth" placeholder="CVV">
             </div>
             <RouterLink to="/profile" class="link-auth"><button class="auth-btn">Оформить заказ</button></RouterLink>
-        </div>
+        </form>
     </main>
 
 </template>
